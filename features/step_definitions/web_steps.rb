@@ -51,10 +51,12 @@ end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
+  #page.body.split("\n").grep(/<td>/).each { |x| puts x }
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
+  #page.body.split("\n").grep(/<td>/).each { |x| puts x }
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
